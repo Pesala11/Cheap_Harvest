@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.s23010317.cheapharvest">
 
-    <!-- Location permission -->
+    <!-- ✅ Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />>
+    <!-- WRITE permission only for Android 9 (API 28) and below -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
@@ -13,21 +19,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CheapHarvest">
 
-        <!-- Google Maps API Key meta-data -->
+        <!-- Google Maps API key -->
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY_HERE" />
+            android:value="AIzaSyA-kdxUciztaBImUBhPWdrjtzPo32iSgUE" /> <!-- Activities -->
 
-        <activity android:name=".LocationActivity" />
-
-        <!-- Other activities -->
-        <activity android:name=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+        <!-- Activities -->
+        <activity android:name=".MapActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".FingerprintAccessActivity" />
@@ -36,7 +35,23 @@
         <activity android:name=".ConsumerDashboardActivity" />
         <activity android:name=".NewProductActivity" />
         <activity android:name=".OrdersActivity" />
+        <activity android:name=".FruitActivity" />
+        <activity android:name=".VegetablesActivity" />
+        <activity android:name=".DairyActivity" />
+        <activity android:name=".ProductListActivity" />
 
+
+
+
+        <!-- Main launcher activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

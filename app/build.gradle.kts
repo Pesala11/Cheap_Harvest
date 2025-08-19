@@ -41,6 +41,7 @@ dependencies {
     // ✅ Add Google Maps and Location Services manually
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation(libs.biometric)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

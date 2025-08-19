@@ -41,7 +41,7 @@ public class FarmerDashboardActivity extends AppCompatActivity {
         btnShareLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FarmerDashboardActivity.this, LocationActivity.class);
+                Intent intent = new Intent(FarmerDashboardActivity.this, MapActivity.class);
                 startActivity(intent);
             }
         });

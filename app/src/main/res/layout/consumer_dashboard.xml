@@ -9,19 +9,6 @@
     android:background="@drawable/home"
     tools:context=".MainActivity">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="368dp"
-        android:layout_height="66dp"
-        android:background="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
-        tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/button11"
         android:layout_width="226dp"
@@ -57,5 +44,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.747" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="406dp"
+        android:layout_height="82dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Select Your Product"
+        android:textColor="#FF9800"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
